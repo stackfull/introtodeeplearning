@@ -1,5 +1,12 @@
 {"image":"mcr.microsoft.com/devcontainers/universal:2",
-
+"features": {
+  "ghcr.io/devcontainers/features/nvidia-cuda:1": {
+    "installCudnn": true
+  }
+},
+"waitFor": "onCreateCommand",
+  "updateContentCommand": "python3 -m pip install mitdeeplearning opencv-python-headless",
+  "postCreateCommand": "",
 "customizations": {
     "codespaces": {
       "openFiles": []
